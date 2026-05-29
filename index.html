@@ -41,6 +41,8 @@
 
   <!-- Preconnect to third-party form host so iframe TLS handshake starts immediately -->
   <link rel="preconnect" href="https://api.leadconnectorhq.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <link rel="preconnect" href="https://link.msgsndr.com" crossorigin>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -277,7 +279,10 @@
 
     <!-- Full-bleed hero photo -->
     <div class="absolute inset-0">
-      <img src="images/hero.png" alt="Black pipe-and-drape booth wall on a trade show floor" width="1672" height="941" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover">
+      <picture>
+        <source type="image/webp" srcset="images/hero.webp">
+        <img src="images/hero.png" alt="Black pipe-and-drape booth wall on a trade show floor" width="1672" height="941" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" decoding="async">
+      </picture>
       <!-- Gradient overlay: darker on the left where the H1 sits, lighter on the right so the image remains visible behind the form -->
       <div class="absolute inset-0" style="background: linear-gradient(100deg, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.55) 55%, rgba(10,10,10,0.45) 100%);"></div>
       <!-- Vertical fade so the transparent header is still legible at the top -->
@@ -454,7 +459,10 @@
       <!-- PIPE &AMP; UPRIGHTS -->
       <div id="tab-uprights" role="tabpanel" class="tab-panel grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-ink-2 shadow-card">
-          <img src="images/pipes.png" alt="Telescoping aluminum pipe-and-drape uprights stacked in a rental warehouse" width="1448" height="1086" loading="lazy" class="w-full h-full object-cover">
+          <picture>
+            <source type="image/webp" srcset="images/pipes.webp">
+            <img src="images/pipes.png" alt="Telescoping aluminum pipe-and-drape uprights stacked in a rental warehouse" width="1448" height="1086" loading="lazy" class="w-full h-full object-cover" decoding="async">
+          </picture>
         </div>
         <div class="lg:col-span-5">
           <p class="eyebrow text-copper mb-3">01 · Pipe &amp; Uprights</p>
@@ -472,7 +480,10 @@
       <!-- DRAPE PANELS -->
       <div id="tab-drape" role="tabpanel" class="tab-panel hidden grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-ink-2 shadow-card">
-          <img src="images/drape.png" alt="Black pipe-pocket drape panels hanging on a pipe-and-drape booth wall" width="1448" height="1086" loading="lazy" class="w-full h-full object-cover">
+          <picture>
+            <source type="image/webp" srcset="images/drape.webp">
+            <img src="images/drape.png" alt="Black pipe-pocket drape panels hanging on a pipe-and-drape booth wall" width="1448" height="1086" loading="lazy" class="w-full h-full object-cover" decoding="async">
+          </picture>
         </div>
         <div class="lg:col-span-5">
           <p class="eyebrow text-copper mb-3">02 · Drape Panels</p>
@@ -490,7 +501,10 @@
       <!-- BASES &AMP; HARDWARE -->
       <div id="tab-bases" role="tabpanel" class="tab-panel hidden grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-ink-2 shadow-card">
-          <img src="images/bases.png" alt="Heavy steel pipe-and-drape base plates with locking caster wheels" width="1448" height="1086" loading="lazy" class="w-full h-full object-cover">
+          <picture>
+            <source type="image/webp" srcset="images/bases.webp">
+            <img src="images/bases.png" alt="Heavy steel pipe-and-drape base plates with locking caster wheels" width="1448" height="1086" loading="lazy" class="w-full h-full object-cover" decoding="async">
+          </picture>
         </div>
         <div class="lg:col-span-5">
           <p class="eyebrow text-copper mb-3">03 · Bases &amp; Hardware</p>
@@ -508,7 +522,10 @@
       <!-- THE COMPLETE BOOTH KIT -->
       <div id="tab-kit" role="tabpanel" class="tab-panel hidden grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-ink-2 shadow-card">
-          <img src="images/kit.png" alt="Complete pipe-and-drape booth kit: pipes, drape, and bases ready for setup" width="1448" height="1086" loading="lazy" class="w-full h-full object-cover">
+          <picture>
+            <source type="image/webp" srcset="images/kit.webp">
+            <img src="images/kit.png" alt="Complete pipe-and-drape booth kit: pipes, drape, and bases ready for setup" width="1448" height="1086" loading="lazy" class="w-full h-full object-cover" decoding="async">
+          </picture>
         </div>
         <div class="lg:col-span-5">
           <p class="eyebrow text-copper mb-3">04 · The Complete Booth Kit</p>
