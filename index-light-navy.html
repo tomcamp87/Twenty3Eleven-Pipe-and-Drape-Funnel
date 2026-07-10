@@ -5,7 +5,7 @@
   Build: HTML5 + Tailwind via CDN. No build step. Deploys to Cloudways as-is.
 
   Design language matches twenty3elevenco.com:
-    - Copper #E8641C on deep ink #1B2A46
+    - Copper #1E3A5F on deep ink #0A0A0A
     - Manrope display sans (heavy)
     - Big "01 / 02 / 03" numbered process blocks
     - Photo-driven with full-bleed hero imagery
@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pipe &amp; Drape Rentals — Twenty3Eleven Co. | Southeast Event Rentals</title>
   <meta name="description" content="Pipe and drape rentals across the Southeast. Trade show booths and ballroom dividers. Same-day delivery available. Get a quote in 60 seconds.">
-  <meta name="theme-color" content="#E8641C">
+  <meta name="theme-color" content="#1E3A5F">
   <meta name="robots" content="noindex,nofollow">
 
   <meta property="og:title" content="Pipe & Drape Rentals — Twenty3Eleven Co.">
@@ -34,7 +34,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Preload hero image so it starts downloading before HTML parsing reaches the img tag -->
   <link rel="preload" as="image" href="images/hero.webp" type="image/webp" fetchpriority="high">
@@ -47,33 +47,33 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
+        tailwind.config = {
       theme: {
         extend: {
           colors: {
-            copper:       '#E8641C',
-            'copper-dark':'#B84E0E',
-            'copper-light':'#F1A57A',
-            ink:          '#1B2A46',
-            'ink-2':      '#243559',
-            'ink-3':      '#334368',
-            bone:         '#E8E2D9',
-            'bone-light': '#F7F7F7',
-            'kit-bg':     '#FFF6EA',
-            muted:        '#6B7280',
-            'muted-dark': '#9CA3AF',
+            copper:       '#1E3A5F',    // Now navy (accent) - kept class name for minimal diff
+            'copper-dark':'#152B47',    // Navy dark hover
+            'copper-light':'#3D5F8A',   // Navy light tint
+            ink:          '#F5EBE0',    // Now cream (main bg) - was dark
+            'ink-2':      '#FAF6F1',    // Now cream-2 (subtle variant) - was near-dark
+            'ink-3':      '#EEE4D6',    // Cream darker (kept name for compat)
+            bone:         '#0A0A0A',    // Now dark ink (text on cream) - was light
+            'bone-light': '#FFFFFF',    // Now pure white for cards on cream section
+            'kit-bg':     '#F0EAE0',    // Muted cream
+            muted:        '#6B7280',    // Same muted gray (works on both themes)
+            'muted-dark': '#4B5563',    // Slightly darker for light bg readability
           },
           fontFamily: {
-            display: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans:    ['Poppins', 'system-ui', 'sans-serif'],
+            display: ['Manrope', 'system-ui', 'sans-serif'],
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
           },
           letterSpacing: {
             'eyebrow': '0.18em',
           },
           boxShadow: {
-            'card':  '0 20px 45px -18px rgba(27,42,70,0.25)',
-            'card-light': '0 10px 30px -10px rgba(27,42,70,0.10)',
-            'inner-line': 'inset 0 0 0 1px rgba(232,226,217,0.9)',
+            'card':  '0 25px 50px -12px rgba(30,58,95,0.15)',
+            'card-light': '0 10px 30px -10px rgba(30,58,95,0.12)',
+            'inner-line': 'inset 0 0 0 1px rgba(30,58,95,0.20)',
           }
         }
       }
@@ -89,61 +89,18 @@
 
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Poppins', system-ui, sans-serif;
-      color: #31353C;
-      background-color: #FFFFFC;
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #0A0A0A;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-    h1, h2, h3, h4, .display {
-      font-family: 'Playfair Display', Georgia, serif;
-      color: #1B2A46;
-      letter-spacing: -0.005em;
-    }
-    /* Dark and orange sections need white heading color to stay legible */
-    .bg-ink h1, .bg-ink h2, .bg-ink h3, .bg-ink h4,
-    .bg-ink-2 h1, .bg-ink-2 h2, .bg-ink-2 h3, .bg-ink-2 h4,
-    .bg-copper h1, .bg-copper h2, .bg-copper h3, .bg-copper h4 { color: #ffffff; }
+    h1, h2, h3, h4, .display { font-family: 'Manrope', system-ui, sans-serif; }
     .eyebrow {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
       font-size: 0.75rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-    }
-
-    /* ===== t3erentals-style product card (display-only, non-clickable) ===== */
-    .product-card {
-      background: #ffffff;
-      border: 1px solid #E8E2D9;
-      border-radius: 14px;
-      box-shadow: 0 2px 8px rgba(27,42,70,0.06);
-      padding: 22px 22px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      transition: box-shadow .2s ease, transform .2s ease;
-    }
-    .product-card:hover { box-shadow: 0 10px 30px rgba(27,42,70,0.10); transform: translateY(-2px); }
-    .product-card .product-media {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      display: flex; align-items: center; justify-content: center;
-      background: #F7F7F7;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 16px;
-    }
-    .product-card .product-media img { max-width: 100%; max-height: 100%; object-fit: contain; }
-    .product-card .product-title {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 0.875rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #1B2A46;
-      line-height: 1.3;
     }
 
     /* ===== Intentional image-placeholder design ===== */
@@ -151,43 +108,43 @@
       position: relative;
       overflow: hidden;
       background:
-        linear-gradient(135deg, #243559 0%, #1B2A46 100%);
+        linear-gradient(135deg, #1A1A1A 0%, #0A0A0A 100%);
       border-radius: 0.75rem;
-      box-shadow: inset 0 0 0 1px rgba(232,100,28,0.18);
+      box-shadow: inset 0 0 0 1px rgba(30,58,95,0.18);
     }
     .ph::before {
       content: '';
       position: absolute; inset: 0;
       background-image:
-        radial-gradient(circle at 25% 30%, rgba(232,100,28,0.18), transparent 45%),
-        radial-gradient(circle at 75% 70%, rgba(232,100,28,0.08), transparent 50%),
+        radial-gradient(circle at 25% 30%, rgba(30,58,95,0.18), transparent 45%),
+        radial-gradient(circle at 75% 70%, rgba(30,58,95,0.08), transparent 50%),
         repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 14px);
       pointer-events: none;
     }
     .ph-label {
       position: absolute; inset: 0;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      color: #E8641C; font-family: 'Poppins', sans-serif; font-weight: 700;
+      color: #1E3A5F; font-family: 'Manrope', sans-serif; font-weight: 700;
       letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.7rem;
       padding: 1rem; text-align: center; gap: .5rem;
     }
     .ph-light {
-      background: linear-gradient(135deg, #F7F7F7 0%, #E8E2D9 100%);
-      box-shadow: inset 0 0 0 1px rgba(232,100,28,0.3);
+      background: linear-gradient(135deg, #FAF6F1 0%, #F5EBE0 100%);
+      box-shadow: inset 0 0 0 1px rgba(30,58,95,0.3);
     }
     .ph-light::before {
       background-image:
-        radial-gradient(circle at 30% 30%, rgba(232,100,28,0.22), transparent 45%),
-        radial-gradient(circle at 70% 75%, rgba(232,100,28,0.10), transparent 50%);
+        radial-gradient(circle at 30% 30%, rgba(30,58,95,0.22), transparent 45%),
+        radial-gradient(circle at 70% 75%, rgba(30,58,95,0.10), transparent 50%);
     }
-    .ph-light .ph-label { color: #B84E0E; }
+    .ph-light .ph-label { color: #152B47; }
 
     /* ===== Hero photo placeholder ===== */
     .hero-ph {
       background:
-        linear-gradient(135deg, rgba(255,255,252,0.92) 0%, rgba(255,255,252,0.72) 50%, rgba(255,255,252,0.55) 100%),
-        radial-gradient(circle at 70% 40%, rgba(232,100,28,0.35), transparent 55%),
-        linear-gradient(180deg, #243559 0%, #1B2A46 100%);
+        linear-gradient(135deg, rgba(245,235,224,0.75) 0%, rgba(245,235,224,0.60) 50%, rgba(245,235,224,0.45) 100%),
+        radial-gradient(circle at 70% 40%, rgba(30,58,95,0.35), transparent 55%),
+        linear-gradient(180deg, #1A1A1A 0%, #0A0A0A 100%);
     }
     .hero-ph::after {
       content: '';
@@ -197,13 +154,13 @@
       pointer-events: none;
     }
 
-    /* ===== Numbered step ===== */
+    /* ===== Numbered step (filled copper, clean across browsers) ===== */
     .step-num {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Manrope', sans-serif;
       font-weight: 800;
       font-size: clamp(3.5rem, 6.5vw, 5.5rem);
       line-height: 1;
-      color: #E8641C;
+      color: #1E3A5F;
       letter-spacing: -0.03em;
       display: inline-block;
       font-variant-numeric: tabular-nums;
@@ -219,35 +176,35 @@
     /* ===== Tabs ===== */
     .tab-btn { transition: all 0.2s ease; }
     .tab-btn[aria-selected="true"] {
-      background: #E8641C; color: white; border-color: #E8641C;
-      box-shadow: 0 8px 20px -8px rgba(232,100,28,0.6);
+      background: #1E3A5F; color: white; border-color: #1E3A5F;
+      box-shadow: 0 8px 20px -8px rgba(30,58,95,0.6);
     }
 
     /* ===== Buttons ===== */
     .btn-copper {
-      background: #E8641C; color: white;
+      background: #1E3A5F; color: white;
       transition: all 0.2s ease;
-      box-shadow: 0 10px 25px -10px rgba(232,100,28,0.6);
+      box-shadow: 0 10px 25px -10px rgba(30,58,95,0.6);
     }
-    .btn-copper:hover { background: #B84E0E; transform: translateY(-1px); box-shadow: 0 15px 30px -10px rgba(232,100,28,0.7); }
+    .btn-copper:hover { background: #152B47; transform: translateY(-1px); box-shadow: 0 15px 30px -10px rgba(30,58,95,0.7); }
 
     .btn-outline {
-      background: transparent; color: #E8641C;
-      border: 2px solid #E8641C;
+      background: transparent; color: #0A0A0A;
+      border: 1px solid rgba(30,58,95,0.35);
       transition: all 0.2s ease;
     }
-    .btn-outline:hover { background: #E8641C; color: #ffffff; }
+    .btn-outline:hover { background: rgba(30,58,95,0.06); border-color: #1E3A5F; color: #1E3A5F; }
 
     /* ===== Hero badge ===== */
     .badge {
       display: inline-flex; align-items: center; gap: 0.5rem;
       padding: 0.45rem 0.9rem; border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(30,58,95,0.08);
+      border: 1px solid rgba(30,58,95,0.15);
       backdrop-filter: blur(8px);
-      color: white; font-size: 0.8rem; font-weight: 500;
+      color: #1E3A5F; font-size: 0.8rem; font-weight: 500;
     }
-    .badge .dot { width: 6px; height: 6px; border-radius: 999px; background: #E8641C; box-shadow: 0 0 8px #E8641C; }
+    .badge .dot { width: 6px; height: 6px; border-radius: 999px; background: #1E3A5F; box-shadow: 0 0 8px #1E3A5F; }
 
     /* ===== Mobile sticky CTA spacer ===== */
     @media (max-width: 767px) { body { padding-bottom: 76px; } }
@@ -259,7 +216,7 @@
     /* ===== Section dividers ===== */
     .divider-copper {
       width: 56px; height: 3px;
-      background: linear-gradient(90deg, #E8641C, #F1A57A);
+      background: linear-gradient(90deg, #1E3A5F, #3D5F8A);
       border-radius: 2px;
     }
 
@@ -274,7 +231,7 @@
       background: white; transition: all 0.15s ease;
       font-size: 0.95rem;
     }
-    .input-field:focus { outline: none; border-color: #E8641C; box-shadow: 0 0 0 4px rgba(232,100,28,0.12); }
+    .input-field:focus { outline: none; border-color: #1E3A5F; box-shadow: 0 0 0 4px rgba(30,58,95,0.12); }
   </style>
 
     <!-- Google Ads — Global Site Tag (gtag.js) -->
@@ -283,12 +240,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'AW-18164070155');
+    // PREVIEW: gtag('config', 'AW-18164070155');
   </script>
 
   <!-- Google Ads — Phone Conversion (call forwarding for 423-380-7586) -->
   <script>
-    gtag('config', 'AW-18164070155/gooPCIfitrccEIvuptVD', {
+    // PREVIEW: gtag('config', 'AW-18164070155/gooPCIfitrccEIvuptVD', {
       'phone_conversion_number': '423-380-7586'
     });
   </script>
@@ -307,46 +264,57 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWJ52RW2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- ================================================================ -->
-  <!-- HEADER — bright, sticky, matches t3erentals.com                    -->
+  <!-- HEADER (transparent over hero, sticky)                             -->
   <!-- ================================================================ -->
-  <header id="site-header" class="sticky top-0 left-0 right-0 z-50 bg-white border-b border-bone">
+  <header id="site-header" class="absolute top-0 left-0 right-0 z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
       <a href="https://twenty3elevenco.com" class="flex items-center">
-        <span class="font-display text-xl sm:text-2xl font-extrabold tracking-tight text-ink">
+        <span class="font-display text-xl sm:text-2xl font-extrabold tracking-tight text-bone">
           Twenty3Eleven<span class="text-copper">.</span>
         </span>
       </a>
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink">
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-bone/80">
         <a href="#products" class="hover:text-copper transition-colors">Inventory</a>
         <a href="#how" class="hover:text-copper transition-colors">How it works</a>
         <a href="#service" class="hover:text-copper transition-colors">Service area</a>
         <a href="#faq" class="hover:text-copper transition-colors">FAQ</a>
       </nav>
-      <div class="flex items-center gap-3 sm:gap-5">
-        <a href="tel:+14233807586" data-track="phone_click" data-location="header"
-           class="hidden sm:inline-flex items-center gap-2 text-ink hover:text-copper font-semibold text-sm sm:text-base transition-colors">
-          <svg class="w-4 h-4 text-copper" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-          423-380-7586
-        </a>
-        <a href="#quote" class="btn-copper inline-flex items-center justify-center px-5 py-2.5 sm:px-6 sm:py-3 rounded-md text-sm font-semibold whitespace-nowrap">
-          Get A Quote
-        </a>
-      </div>
+      <a href="tel:+14233807586" data-track="phone_click" data-location="header"
+         class="inline-flex items-center gap-2 text-bone hover:text-copper font-semibold text-sm sm:text-base transition-colors">
+        <svg class="w-4 h-4 text-copper" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+        <span class="hidden sm:inline">423-380-7586</span>
+        <span class="sm:hidden">Call</span>
+      </a>
     </div>
   </header>
 
   <!-- ================================================================ -->
   <!-- HERO — dark, photographic, form floats over image                  -->
   <!-- ================================================================ -->
-  <section class="bg-white">
+  <section class="relative min-h-[760px] lg:min-h-[820px] flex items-center overflow-hidden bg-ink">
 
+    <!-- Full-bleed hero photo -->
+    <div class="absolute inset-0">
+      <picture>
+        <source type="image/webp" srcset="images/hero.webp">
+        <img src="images/hero.png" alt="Black pipe-and-drape booth wall on a trade show floor" width="1672" height="941" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" decoding="async">
+      </picture>
+      <!-- Gradient overlay: darker on the left where the H1 sits, lighter on the right so the image remains visible behind the form -->
+      <div class="absolute inset-0" style="background: linear-gradient(100deg, rgba(245,235,224,0.75) 0%, rgba(245,235,224,0.45) 55%, rgba(245,235,224,0.20) 100%);"></div>
+      <!-- Vertical fade so the transparent header is still legible at the top -->
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(245,235,224,0.45) 0%, transparent 18%, transparent 100%);"></div>
+    </div>
 
     <!-- Content overlay -->
-    <div class="w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-14 lg:py-20">
-      <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-32 lg:py-40">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
 
         <!-- LEFT: pitch -->
-        <div class="lg:col-span-7 text-ink">
+        <div class="lg:col-span-7 text-bone">
+          <div class="flex items-center gap-3 mb-7">
+            <span class="badge"><span class="dot"></span>Same-day delivery available</span>
+          </div>
+
           <p class="eyebrow text-copper mb-5">Expo &amp; Event Rentals · Southeast US</p>
 
           <h1 class="display text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[0.98] tracking-tight mb-6">
@@ -355,36 +323,24 @@
             <span class="text-copper">Delivered.</span>
           </h1>
 
-
-
-          <!-- Inline hero photo — sits above the description in the LEFT column -->
-          <div class="mb-8 rounded-xl overflow-hidden shadow-card border border-bone">
-            <picture>
-              <source srcset="images/hero.webp" type="image/webp">
-              <img src="images/hero.png" width="1672" height="941" fetchpriority="high"
-                   alt="Twenty3Eleven event rental hero photo"
-                   class="block w-full h-auto object-cover" style="aspect-ratio: 16 / 9;">
-            </picture>
-          </div>
-
-          <p class="text-lg sm:text-xl text-muted leading-relaxed mb-8 max-w-xl">
+          <p class="text-lg sm:text-xl text-bone/70 leading-relaxed mb-8 max-w-xl">
             Event-grade pipe and drape for trade show booths, ballroom dividers, and meeting room walls. Delivery and pickup available! One quote, one delivery, one invoice.
           </p>
 
           <div class="flex flex-col sm:flex-row gap-3 sm:items-center mb-10">
-            <a href="#quote-bottom" class="btn-copper inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md font-semibold text-sm tracking-wide uppercase">
+            <a href="#quote-bottom" class="btn-copper inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-bold text-base">
               Get My Quote
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
             </a>
             <a href="tel:+14233807586" data-track="phone_click" data-location="hero"
-               class="btn-outline inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md font-semibold text-sm tracking-wide uppercase">
+               class="btn-outline inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-semibold text-base">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
               423-380-7586
             </a>
           </div>
 
           <!-- Inline trust strip -->
-          <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
+          <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-bone/60">
             <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-copper"></span>Trusted by 500+ event producers</span>
             <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-copper"></span>Fully insured · COI on request</span>
             <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-copper"></span>Same-day delivery available</span>
@@ -393,7 +349,7 @@
 
         <!-- RIGHT: floating form card -->
         <div class="lg:col-span-5" id="quote">
-          <div class="bg-white rounded-2xl shadow-card px-6 pt-6 pb-0.5 sm:px-8 sm:pt-8 sm:pb-0.5 border border-bone">
+          <div class="bg-white rounded-2xl shadow-card px-6 pt-6 pb-0.5 sm:px-8 sm:pt-8 sm:pb-0.5 border border-white/10">
             <div class="flex items-center gap-2 mb-1">
               <span class="eyebrow text-copper">Free Quote · 60 Seconds</span>
             </div>
@@ -430,87 +386,21 @@
   </section>
 
   <!-- ================================================================ -->
-  <!-- FEATURED RENTALS — non-clickable showcase.                         -->
-  <!-- Product photos pulled from t3erentals.com WP media. Display-only:  -->
-  <!-- no anchor tags, no data-track, no click handlers, no hover-nav.    -->
-  <!-- ================================================================ -->
-  <section class="py-20 lg:py-24 bg-bone-light">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-
-      <div class="text-center max-w-3xl mx-auto mb-14 lg:mb-16">
-        <p class="eyebrow text-copper mb-4">Quality. Style. Versatility.</p>
-        <h2 class="display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink leading-[1.05] tracking-tight mb-5">
-          Pipe &amp; Drape for Every Event
-        </h2>
-        <div class="divider-copper mx-auto mb-6"></div>
-        <p class="text-muted text-base sm:text-lg leading-relaxed">
-          A clean, high-quality selection to fit any event style, size, and budget.<br>
-          Delivered on time and set up just right.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-
-        <div class="product-card">
-          <div class="product-media">
-            <img src="https://t3erentals.com/wp-content/uploads/2026/07/Product-Photo-Pipe-Drape-Bare1.png"
-                 alt="Bare pipe and drape kit hardware — uprights, crossbars, and bases"
-                 loading="lazy" width="600" height="600">
-          </div>
-          <div class="product-title mb-2">Pipe &amp; Drape Kit</div>
-          <p class="text-sm text-muted leading-relaxed">Uprights, crossbars, and bases — the full hardware kit for booth walls and dividers.</p>
-        </div>
-
-        <div class="product-card">
-          <div class="product-media">
-            <img src="https://t3erentals.com/wp-content/uploads/2026/07/Product-Photo-Pipe-Drape-Covered1.png"
-                 alt="Draped pipe and drape backdrop with black velvet panels"
-                 loading="lazy" width="600" height="600">
-          </div>
-          <div class="product-title mb-2">Draped Backdrop</div>
-          <p class="text-sm text-muted leading-relaxed">Full backdrop with drape panels — perfect for stages, photo walls, and booth backing.</p>
-        </div>
-
-        <div class="product-card">
-          <div class="product-media">
-            <img src="https://t3erentals.com/wp-content/uploads/2026/07/Product-Photo-Pipe-and-Drape-Wedding1.png"
-                 alt="Wedding pipe and drape setup with white flowing drape"
-                 loading="lazy" width="600" height="600">
-          </div>
-          <div class="product-title mb-2">Wedding Draping</div>
-          <p class="text-sm text-muted leading-relaxed">Elegant white draping for ceremonies, receptions, and head tables.</p>
-        </div>
-
-        <div class="product-card">
-          <div class="product-media">
-            <img src="https://t3erentals.com/wp-content/uploads/2026/07/Product-Photo-Wedding-Arch1.png"
-                 alt="Classic wooden wedding arch"
-                 loading="lazy" width="600" height="600">
-          </div>
-          <div class="product-title mb-2">Wedding Arch</div>
-          <p class="text-sm text-muted leading-relaxed">A classic arch to frame your ceremony — pairs beautifully with draping.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================================ -->
   <!-- LOGO / TRUST STRIP                                                 -->
   <!-- ================================================================ -->
-  <section class="bg-white py-8 border-b border-bone">
+  <section class="bg-ink-2 py-8 border-y border-white/5">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
       <p class="eyebrow text-copper text-center mb-6 opacity-80">As deployed for</p>
       <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 opacity-60">
-        <span class="font-display font-bold text-muted text-lg tracking-tight">Trade Shows</span>
-        <span class="text-ink/20">·</span>
-        <span class="font-display font-bold text-muted text-lg tracking-tight">Corporate Events</span>
-        <span class="text-ink/20">·</span>
-        <span class="font-display font-bold text-muted text-lg tracking-tight">Conferences</span>
-        <span class="text-ink/20">·</span>
-        <span class="font-display font-bold text-muted text-lg tracking-tight">Galas</span>
-        <span class="text-ink/20">·</span>
-        <span class="font-display font-bold text-muted text-lg tracking-tight">Weddings</span>
+        <span class="font-display font-bold text-bone/40 text-lg tracking-tight">Trade Shows</span>
+        <span class="text-bone/20">·</span>
+        <span class="font-display font-bold text-bone/40 text-lg tracking-tight">Corporate Events</span>
+        <span class="text-bone/20">·</span>
+        <span class="font-display font-bold text-bone/40 text-lg tracking-tight">Conferences</span>
+        <span class="text-bone/20">·</span>
+        <span class="font-display font-bold text-bone/40 text-lg tracking-tight">Galas</span>
+        <span class="text-bone/20">·</span>
+        <span class="font-display font-bold text-bone/40 text-lg tracking-tight">Weddings</span>
       </div>
     </div>
   </section>
@@ -561,7 +451,7 @@
   <!-- ================================================================ -->
   <!-- PRODUCT TABS — dark band, photo + spec layout                      -->
   <!-- ================================================================ -->
-  <section id="products" class="py-24 lg:py-32 bg-white">
+  <section id="products" class="py-24 lg:py-32 bg-ink text-bone">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 lg:mb-16">
         <div class="max-w-2xl">
@@ -571,20 +461,20 @@
           </h2>
           <div class="divider-copper"></div>
         </div>
-        <p class="text-muted text-base max-w-md">Pipe and drape across the Southeast. Inspected before every event.</p>
+        <p class="text-bone/60 text-base max-w-md">Pipe and drape across the Southeast. Inspected before every event.</p>
       </div>
 
       <!-- Tab buttons -->
       <div role="tablist" class="flex flex-wrap gap-2 mb-10">
-        <button role="tab" aria-selected="true" aria-controls="tab-uprights" id="t-uprights" class="tab-btn px-5 py-2.5 border border-bone rounded-full text-sm font-semibold text-ink hover:text-copper bg-bone-light">Pipe &amp; Uprights</button>
-        <button role="tab" aria-selected="false" aria-controls="tab-drape" id="t-drape" class="tab-btn px-5 py-2.5 border border-bone rounded-full text-sm font-semibold text-ink hover:text-copper bg-bone-light">Drape Panels</button>
-        <button role="tab" aria-selected="false" aria-controls="tab-bases" id="t-bases" class="tab-btn px-5 py-2.5 border border-bone rounded-full text-sm font-semibold text-ink hover:text-copper bg-bone-light">Bases &amp; Hardware</button>
-        <button role="tab" aria-selected="false" aria-controls="tab-kit" id="t-kit" class="tab-btn px-5 py-2.5 border border-bone rounded-full text-sm font-semibold text-ink hover:text-copper bg-bone-light">The Complete Booth Kit</button>
+        <button role="tab" aria-selected="true" aria-controls="tab-uprights" id="t-uprights" class="tab-btn px-5 py-2.5 border border-white/15 rounded-full text-sm font-semibold text-bone/80 hover:text-bone">Pipe &amp; Uprights</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-drape" id="t-drape" class="tab-btn px-5 py-2.5 border border-white/15 rounded-full text-sm font-semibold text-bone/80 hover:text-bone">Drape Panels</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-bases" id="t-bases" class="tab-btn px-5 py-2.5 border border-white/15 rounded-full text-sm font-semibold text-bone/80 hover:text-bone">Bases &amp; Hardware</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-kit" id="t-kit" class="tab-btn px-5 py-2.5 border border-white/15 rounded-full text-sm font-semibold text-bone/80 hover:text-bone">The Complete Booth Kit</button>
       </div>
 
       <!-- PIPE &AMP; UPRIGHTS -->
       <div id="tab-uprights" role="tabpanel" class="tab-panel grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-bone-light shadow-card border border-bone">
+        <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-ink-2 shadow-card">
           <picture>
             <source type="image/webp" srcset="images/pipes.webp">
             <img src="images/pipes.png" alt="Telescoping aluminum pipe-and-drape uprights stacked in a rental warehouse" width="1448" height="1086" loading="lazy" class="w-full h-full object-cover" decoding="async">
@@ -593,8 +483,8 @@
         <div class="lg:col-span-5">
           <p class="eyebrow text-copper mb-3">01 · Pipe &amp; Uprights</p>
           <h3 class="display text-3xl lg:text-4xl font-extrabold mb-5 leading-tight">For trade show booths and stage walls.</h3>
-          <p class="text-muted mb-7 leading-relaxed">Telescoping aluminum uprights sized to your floor plan. Heavy-duty crossbars and connectors. Backstand systems for free-standing walls.</p>
-          <ul class="space-y-3 text-sm text-muted">
+          <p class="text-bone/70 mb-7 leading-relaxed">Telescoping aluminum uprights sized to your floor plan. Heavy-duty crossbars and connectors. Backstand systems for free-standing walls.</p>
+          <ul class="space-y-3 text-sm text-bone/80">
             <li class="flex gap-3"><span class="text-copper font-bold">→</span> Telescoping heights for any setup</li>
             <li class="flex gap-3"><span class="text-copper font-bold">→</span> Telescoping aluminum uprights</li>
             <li class="flex gap-3"><span class="text-copper font-bold">→</span> Crossbars and locking connectors</li>
@@ -605,7 +495,7 @@
 
       <!-- DRAPE PANELS -->
       <div id="tab-drape" role="tabpanel" class="tab-panel hidden grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-bone-light shadow-card border border-bone">
+        <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-ink-2 shadow-card">
           <picture>
             <source type="image/webp" srcset="images/drape.webp">
             <img src="images/drape.png" alt="Black pipe-pocket drape panels hanging on a pipe-and-drape booth wall" width="1448" height="1086" loading="lazy" class="w-full h-full object-cover" decoding="async">
@@ -614,8 +504,8 @@
         <div class="lg:col-span-5">
           <p class="eyebrow text-copper mb-3">02 · Drape Panels</p>
           <h3 class="display text-3xl lg:text-4xl font-extrabold mb-5 leading-tight">Pipe-pocket panels in 18+ colors.</h3>
-          <p class="text-muted mb-7 leading-relaxed">Polyester-spun fabric. Wrinkle-resistant. Available in standard event widths (4', 8') and matching valance options.</p>
-          <ul class="space-y-3 text-sm text-muted">
+          <p class="text-bone/70 mb-7 leading-relaxed">Polyester-spun fabric. Wrinkle-resistant. Available in standard event widths (4', 8') and matching valance options.</p>
+          <ul class="space-y-3 text-sm text-bone/80">
             <li class="flex gap-3"><span class="text-copper font-bold">→</span> Black, white, ivory, navy, gold + more</li>
             <li class="flex gap-3"><span class="text-copper font-bold">→</span> Pipe-pocket sewn for fast hanging</li>
             <li class="flex gap-3"><span class="text-copper font-bold">→</span> Wrinkle-resistant polyester</li>
@@ -626,7 +516,7 @@
 
       <!-- BASES &AMP; HARDWARE -->
       <div id="tab-bases" role="tabpanel" class="tab-panel hidden grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-bone-light shadow-card border border-bone">
+        <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-ink-2 shadow-card">
           <picture>
             <source type="image/webp" srcset="images/bases.webp">
             <img src="images/bases.png" alt="Heavy steel pipe-and-drape base plates with locking caster wheels" width="1448" height="1086" loading="lazy" class="w-full h-full object-cover" decoding="async">
@@ -635,8 +525,8 @@
         <div class="lg:col-span-5">
           <p class="eyebrow text-copper mb-3">03 · Bases &amp; Hardware</p>
           <h3 class="display text-3xl lg:text-4xl font-extrabold mb-5 leading-tight">Weighted bases. Locking casters optional.</h3>
-          <p class="text-muted mb-7 leading-relaxed">Solid steel 18"x18" and 24"x24" base plates rated for indoor and event-grade outdoor use. Optional locking caster wheels for movable booth applications.</p>
-          <ul class="space-y-3 text-sm text-muted">
+          <p class="text-bone/70 mb-7 leading-relaxed">Solid steel 18"x18" and 24"x24" base plates rated for indoor and event-grade outdoor use. Optional locking caster wheels for movable booth applications.</p>
+          <ul class="space-y-3 text-sm text-bone/80">
             <li class="flex gap-3"><span class="text-copper font-bold">→</span> Steel plates 14–35 lb</li>
             <li class="flex gap-3"><span class="text-copper font-bold">→</span> Optional locking casters</li>
             <li class="flex gap-3"><span class="text-copper font-bold">→</span> Drape brakes and clips</li>
@@ -647,7 +537,7 @@
 
       <!-- THE COMPLETE BOOTH KIT -->
       <div id="tab-kit" role="tabpanel" class="tab-panel hidden grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-bone-light shadow-card border border-bone">
+        <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-ink-2 shadow-card">
           <picture>
             <source type="image/webp" srcset="images/kit.webp">
             <img src="images/kit.png" alt="Complete pipe-and-drape booth kit: pipes, drape, and bases ready for setup" width="1448" height="1086" loading="lazy" class="w-full h-full object-cover" decoding="async">
@@ -656,8 +546,8 @@
         <div class="lg:col-span-5">
           <p class="eyebrow text-copper mb-3">04 · The Complete Booth Kit</p>
           <h3 class="display text-3xl lg:text-4xl font-extrabold mb-5 leading-tight">Pipes, drape, bases — done.</h3>
-          <p class="text-muted mb-7 leading-relaxed">A complete 10x10 or 10x20 booth kit shipped as one unit. Everything you need to build out your booth. Sized to your floor plan.</p>
-          <ul class="space-y-3 text-sm text-muted">
+          <p class="text-bone/70 mb-7 leading-relaxed">A complete 10x10 or 10x20 booth kit shipped as one unit. Everything you need to build out your booth. Sized to your floor plan.</p>
+          <ul class="space-y-3 text-sm text-bone/80">
             <li class="flex gap-3"><span class="text-copper font-bold">→</span> 10x10 and 10x20 standard kits</li>
             <li class="flex gap-3"><span class="text-copper font-bold">→</span> Custom dimensions on request</li>
             <li class="flex gap-3"><span class="text-copper font-bold">→</span> Single delivery / single pickup</li>
@@ -674,18 +564,18 @@
   <!-- ================================================================ -->
   <section class="bg-copper relative overflow-hidden">
     <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.3), transparent 50%), radial-gradient(circle at 80% 30%, rgba(255,255,255,0.2), transparent 50%);"></div>
-    <div class="relative max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-20 text-white">
+    <div class="relative max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-20 text-bone">
       <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
         <div class="max-w-2xl">
-          <p class="eyebrow text-muted mb-3">Complete Booth Kit</p>
+          <p class="eyebrow text-bone/80 mb-3">Complete Booth Kit</p>
           <h2 class="display text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-3">
             Need a full booth? Quote the complete kit.
           </h2>
-          <p class="text-white text-lg leading-relaxed opacity-95">
+          <p class="text-bone/90 text-lg leading-relaxed">
             Pipes + drape + bases in one delivery. Built for exhibitors and producers who don't have time to coordinate three vendors.
           </p>
         </div>
-        <a href="#quote-bottom" class="inline-flex items-center justify-center gap-2 bg-ink hover:bg-ink-2 text-white font-bold px-8 py-4 rounded-xl whitespace-nowrap transition-colors">
+        <a href="#quote-bottom" class="inline-flex items-center justify-center gap-2 bg-ink hover:bg-ink-2 text-bone font-bold px-8 py-4 rounded-xl whitespace-nowrap transition-colors">
           Quote the Kit
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
         </a>
@@ -744,30 +634,30 @@
 
       <div class="grid md:grid-cols-3 gap-5 lg:gap-6">
 
-        <figure class="bg-bone-light text-ink rounded-2xl border border-bone p-8 lg:p-10">
+        <figure class="bg-ink text-bone rounded-2xl p-8 lg:p-10">
           <svg class="w-9 h-9 text-copper mb-5" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
           <blockquote class="text-lg leading-relaxed mb-6">Their pipe-and-drape walls were perfect for our trade show booth — clean, plumb, no sagging drape.</blockquote>
-          <figcaption class="text-sm border-t border-bone pt-5">
+          <figcaption class="text-sm border-t border-white/10 pt-5">
             <div class="font-semibold">Jessica</div>
-            <div class="text-muted">Event Director</div>
+            <div class="text-bone/50">Event Director</div>
           </figcaption>
         </figure>
 
-        <figure class="bg-bone-light text-ink rounded-2xl border border-bone p-8 lg:p-10">
+        <figure class="bg-ink text-bone rounded-2xl p-8 lg:p-10">
           <svg class="w-9 h-9 text-copper mb-5" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
           <blockquote class="text-lg leading-relaxed mb-6">One quote, one delivery, one invoice — exactly what they said. Made our procurement team's life easy.</blockquote>
-          <figcaption class="text-sm border-t border-bone pt-5">
+          <figcaption class="text-sm border-t border-white/10 pt-5">
             <div class="font-semibold">Marcus</div>
-            <div class="text-muted">Production Manager</div>
+            <div class="text-bone/50">Production Manager</div>
           </figcaption>
         </figure>
 
-        <figure class="bg-bone-light text-ink rounded-2xl border border-bone p-8 lg:p-10">
+        <figure class="bg-ink text-bone rounded-2xl p-8 lg:p-10">
           <svg class="w-9 h-9 text-copper mb-5" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
           <blockquote class="text-lg leading-relaxed mb-6">Called them Tuesday for a Saturday event. On site Friday morning with everything we needed.</blockquote>
-          <figcaption class="text-sm border-t border-bone pt-5">
+          <figcaption class="text-sm border-t border-white/10 pt-5">
             <div class="font-semibold">Dan</div>
-            <div class="text-muted">General Contractor</div>
+            <div class="text-bone/50">General Contractor</div>
           </figcaption>
         </figure>
 
@@ -778,7 +668,7 @@
   <!-- ================================================================ -->
   <!-- SERVICE AREA                                                       -->
   <!-- ================================================================ -->
-  <section id="service" class="py-24 lg:py-32 bg-bone-light">
+  <section id="service" class="py-24 lg:py-32 bg-ink text-bone">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
@@ -787,7 +677,7 @@
             Serving the<br>Southeast US.
           </h2>
           <div class="divider-copper mb-7"></div>
-          <p class="text-muted text-lg mb-8 leading-relaxed">
+          <p class="text-bone/70 text-lg mb-8 leading-relaxed">
             Direct service across the Southeast metros below. Standard delivery radius covers everything listed — if your event is outside it, we ship. Just ask.
           </p>
           <ul class="grid grid-cols-2 gap-x-6 gap-y-3 text-base">
@@ -809,12 +699,12 @@
           <svg viewBox="595 195 350 355" class="w-full h-full" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%; fill-rule:evenodd;" aria-label="Southeast US service area map">
             <defs>
               <radialGradient id="metroGlow" cx="0.5" cy="0.5" r="0.5">
-                <stop offset="0%" stop-color="#F1A57A" stop-opacity="0.85"/>
-                <stop offset="100%" stop-color="#E8641C" stop-opacity="0"/>
+                <stop offset="0%" stop-color="#3D5F8A" stop-opacity="0.85"/>
+                <stop offset="100%" stop-color="#1E3A5F" stop-opacity="0"/>
               </radialGradient>
               <radialGradient id="hqGlow" cx="0.5" cy="0.5" r="0.5">
-                <stop offset="0%" stop-color="#FFF6EA" stop-opacity="0.95"/>
-                <stop offset="100%" stop-color="#E8641C" stop-opacity="0"/>
+                <stop offset="0%" stop-color="#FFF4E5" stop-opacity="0.95"/>
+                <stop offset="100%" stop-color="#1E3A5F" stop-opacity="0"/>
               </radialGradient>
             </defs>
 
@@ -822,7 +712,7 @@
             <!-- CONTEXT STATES (outside service area)         -->
             <!-- Real geographic outlines from simplemaps.com  -->
             <!-- ============================================ -->
-            <g fill="rgba(232,100,28,0.04)" stroke="rgba(232,100,28,0.22)" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round">
+            <g fill="rgba(30,58,95,0.04)" stroke="rgba(30,58,95,0.22)" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round">
               <!-- KY moved to SERVICE AREA STATES (lit up — Louisville is now a service metro) -->
               <path d="m 690.4559,328.05566 -10.48282,1.55301 4.27078,-6.79442 -1.8442,-3.78546 -36.98105,3.59134 -31.25432,2.52364 -4.56197,0.29119 0.58238,2.71776 3.78546,19.60675 0.0971,4.36784 1.0677,26.40117 0.0971,4.36784 0.29119,0.0971 1.45595,1.55301 5.82378,-0.19413 0.58238,8.54155 0.19413,2.42658 3.00896,-0.29119 9.22099,-0.67944 36.5928,-3.39721 0.19412,0 -0.0971,-2.13539 0.97063,-0.67944 -1.74713,-3.30014 3.6884,-15.5301 -1.45595,-1.74714 5.5326,-6.11498 -0.38826,-5.2414 4.07665,-6.79442 0,-0.0971 -0.19412,-0.19412 3.49427,-3.20309 -0.97063,-3.88252 2.71777,-4.27078 -0.58238,-3.97959 2.91189,-5.62966 0,-0.0971 -0.0971,0 z"/>  <!-- AR -->
               <path d="m 688.99995,469.2825 -1.26182,0.29119 -0.58238,0.58238 1.8442,-0.87357 z m 4.07665,0 -0.67944,-0.29119 -0.19412,0.29119 0.87356,0 z m 2.32952,-0.77651 -0.67944,0 -0.38826,0.48532 1.0677,-0.48532 z m -1.16476,-0.67944 -0.19413,-0.29119 -0.0971,0.29119 0.29119,0 z m 7.76505,-5.14434 -0.29119,0.19412 0.48532,0 -0.19413,-0.19412 z m 13.58884,-5.72673 0.58238,-0.7765 -0.67945,0.87357 0.0971,-0.0971 z m 1.94126,-2.52364 -0.19413,0.0971 0,0.0971 0.19413,-0.19413 z m -49.89044,8.54156 1.45594,-1.8442 -3.97959,-1.0677 -1.74713,1.45595 4.27078,1.45595 z m 40.28119,-8.44449 -0.38825,-0.38826 -0.0971,0.19413 0.48532,0.19413 z m 1.06769,-1.74714 -0.97063,-0.29119 0.29119,0.97063 0.67944,-0.67944 z m 7.95918,-1.65007 0,-0.29119 0,0.0971 0,0.19413 z m 1.94126,-1.26182 -0.0971,-0.0971 0.0971,0.19413 0,-0.0971 z m -0.7765,-0.19413 -0.19413,-0.0971 -0.0971,0.29119 0.29119,-0.19413 z m -6.79442,-0.29119 0.87357,-0.29119 0,-0.29119 -0.87357,0.58238 z m 0.48532,-0.48532 0.48531,-0.48531 -0.0971,-0.0971 -0.38825,0.58237 z m -3.39721,-3.59133 -0.19413,0.19413 0.0971,0 0.0971,-0.19413 z m -35.8163,-54.35535 -0.19412,0 -36.5928,3.39721 -9.22099,0.67944 -3.00896,0.29119 0.0971,2.32952 1.94126,18.73318 3.20309,4.4649 0.0971,2.62071 3.10602,5.43553 2.52364,7.95918 -0.87357,4.4649 -0.67944,11.0652 -1.45594,3.59133 0.19412,0 0.29119,2.52364 -1.65007,2.32952 12.03582,-1.35889 9.41513,2.62071 6.69735,0.87357 3.39721,-2.42658 -1.8442,-2.42658 6.21204,-1.94126 -0.19412,2.13539 3.20308,-0.77651 2.6207,4.07665 2.23245,-0.7765 5.82379,3.97959 -3.59133,1.26182 8.25036,2.42657 3.10602,0 1.8442,-2.23245 3.97959,-2.13539 2.81483,4.07666 1.94126,-3.6884 -0.58238,-5.82379 5.24141,2.03833 0.58238,1.74713 6.21204,0.77651 3.10602,2.52364 -0.38825,2.03832 4.36784,-4.07665 -1.65008,-2.13539 -7.27973,-1.8442 -2.71777,-1.55301 -0.0971,-2.91189 3.00896,0.38825 2.32951,-4.75609 -3.00896,-4.17371 -1.65007,3.97958 -3.78546,-0.67944 2.6207,-4.27078 -1.74713,-0.48531 -4.27078,3.00896 -6.11498,0.38825 -1.74713,-1.35889 2.81483,-4.95021 3.30014,-0.0971 5.62967,1.8442 4.07665,0.38825 0,0 -2.23245,-2.81483 -4.27078,-8.34742 1.16476,-4.65903 -33.48678,3.68839 1.26182,-1.26182 -1.35888,-3.49427 2.03832,-3.00896 1.16476,-7.57092 7.3768,-12.6182 -3.59134,-4.36784 0.19413,-3.20309 -2.23246,-5.24141 0,-0.67944 z"/>  <!-- LA -->
@@ -834,7 +724,7 @@
             <!-- ============================================ -->
             <!-- SERVICE AREA STATES (where metros live)       -->
             <!-- ============================================ -->
-            <g fill="rgba(232,100,28,0.13)" stroke="rgba(232,100,28,0.55)" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round">
+            <g fill="rgba(30,58,95,0.13)" stroke="rgba(30,58,95,0.55)" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round">
               <path d="m 693.17367,317.18459 -0.29119,-0.7765 -0.58238,-0.19413 -0.38825,1.26182 0.0971,0.0971 1.06769,-0.0971 0.0971,-0.29119 z m 66.39117,-63.47928 -0.19413,0.19413 1.26182,4.75609 -5.2414,4.17371 -4.27078,0.0971 0.97063,3.6884 -6.11498,8.05623 0.0971,2.81483 -6.89148,-0.58237 -2.52365,4.95022 -4.65903,-0.67945 -3.10602,2.32952 -0.58237,2.23245 -5.43554,-2.03833 -4.36784,1.45595 -3.59133,0 -1.45595,2.71777 -0.38825,0.0971 0,0.29119 -1.45595,3.30015 1.65007,2.32951 -6.11497,3.59134 1.45594,4.27077 -1.8442,2.13539 -7.47386,-2.03832 -1.94126,4.56196 0.58238,0.58238 0.19413,0.38826 -0.87357,7.95917 -0.38826,0.19413 -2.52364,1.55301 -0.0971,0.29119 2.81483,-0.38826 19.60675,-2.6207 -0.97063,-3.88252 3.30015,-0.0971 39.50469,-5.24141 27.76005,-4.65903 0.38825,-0.29119 0.67944,-0.7765 7.27974,-3.88252 5.62966,-7.3768 0.7765,-2.52364 3.6884,-2.9119 4.65903,-5.92085 0.67944,-0.97063 -0.29119,-0.0971 -2.42657,0 -3.10602,-1.74714 -5.5326,-6.69735 -1.94126,-6.79442 0,-0.19413 -0.19413,-0.19412 -4.07665,-2.32952 -1.8442,-3.10602 -3.6884,3.59134 -2.32951,0.58238 -2.9119,-1.16476 -2.52364,1.94126 -5.24141,-2.32951 -1.35888,0.58237 -4.95022,-4.27077 -2.52364,-1.26182 -4.75609,0.58238 -0.77651,0.7765 z"/>  <!-- KY (lit up — Louisville is service metro) -->
               <path d="m 716.76,442.78427 -0.48531,0.0971 0,0.0971 0.48531,-0.19412 z m 9.02687,-1.16476 -1.35888,0 1.26182,0.0971 0.0971,-0.0971 z m -11.25932,0.97063 -0.38825,0.38825 0.0971,0.0971 0.29119,-0.48532 z m 9.12394,-0.7765 -3.6884,0 3.49427,0.0971 0.19413,-0.0971 z m -40.47533,-92.50116 0,0.0971 -4.07665,6.79442 0.38826,5.2414 -5.5326,6.11498 1.45595,1.74714 -3.6884,15.5301 1.74713,3.30014 -0.97063,0.67944 0.0971,2.13539 0,0.67944 2.23246,5.24141 -0.19413,3.20309 3.59134,4.36784 -7.3768,12.6182 -1.16476,7.57092 -2.03832,3.00896 1.35888,3.49427 -1.26182,1.26182 33.48678,-3.68839 -1.16476,4.65903 4.27078,8.34742 2.23245,2.81483 0,-0.0971 3.59133,-4.07665 7.57093,-1.65007 6.98854,0.7765 1.06769,-1.35888 0,-0.0971 -4.95021,-29.89545 -0.19413,-21.8392 -0.58238,-39.79588 -1.35888,-0.87356 -0.38826,-0.77651 -0.19412,0 -4.85316,0.67944 -8.54155,1.16476 -19.41263,2.42658 -2.13539,0.19412 z"/>  <!-- MS -->
               <path d="m 718.31301,344.84758 0.38826,0.77651 1.35888,0.87356 0.58238,39.79588 0.19413,21.8392 4.95021,29.89545 0.38826,-0.0971 4.36784,0.87357 1.16475,-8.63862 1.94127,4.85316 3.30014,3.00896 6.30911,-3.6884 -0.67945,-0.58238 0.19413,0.0971 -4.36784,-9.9975 41.93127,-6.79442 2.81483,-0.48531 0,-0.0971 -2.62071,-4.95022 -0.19412,-7.0856 -2.13539,-3.88253 1.06769,-7.57092 1.74714,-1.94126 -7.18267,-12.81234 -13.00646,-39.60175 -0.0971,-0.19413 -2.9119,0.48532 -15.5301,2.52364 -7.76504,0.97063 -16.30661,2.23245 0.0971,0.19413 z"/>  <!-- AL -->
@@ -846,10 +736,10 @@
 
             <!-- TENNESSEE — HQ state, highlighted -->
             <path d="m 786.2572,300.48973 -27.76005,4.65903 -39.50469,5.24141 -3.30015,0.0971 0.97063,3.88252 -19.60675,2.6207 -2.81483,0.38826 0,0.0971 -0.7765,0.97063 -0.38826,-0.0971 0,-0.77651 0,-0.0971 -1.06769,0.0971 0.0971,0.0971 0.58238,2.71776 -1.94126,2.42658 -0.19413,4.46491 0,0.7765 0,0.0971 -2.91189,5.62966 0.58238,3.97959 -2.71777,4.27078 0.97063,3.88252 -3.49427,3.20309 0.19412,0.19412 2.13539,-0.19412 19.41263,-2.42658 8.54155,-1.16476 4.85316,-0.67944 0.19412,0 -0.0971,-0.19413 16.30661,-2.23245 7.76504,-0.97063 15.5301,-2.52364 2.9119,-0.48532 1.74713,-0.19412 8.25037,-1.55301 2.03832,-0.38825 7.57093,-1.45595 1.35888,-0.19413 0,-0.97063 -0.0971,-4.27078 3.59133,-1.94126 0.19413,-2.52364 4.07665,-3.78546 3.88253,-0.97063 7.95917,-7.18267 3.00896,-4.46491 2.32951,0.87357 5.24141,-5.14434 2.81483,-0.29119 2.52364,-5.14435 1.0677,0.0971 -0.0971,-4.17371 0.48532,-1.45595 -1.55301,0.29119 -5.5326,1.55301 -6.60029,1.35889 -16.59779,3.39721 -1.74714,0.29118 -0.38825,0.29119 z"
-                  fill="rgba(232,100,28,0.28)" stroke="rgba(232,100,28,0.9)" stroke-width="1.3" stroke-linejoin="round"/>
+                  fill="rgba(30,58,95,0.28)" stroke="rgba(30,58,95,0.9)" stroke-width="1.3" stroke-linejoin="round"/>
 
             <!-- State labels (subtle, repositioned to avoid metro overlap) -->
-            <g font-family="Poppins, sans-serif" font-size="6" font-weight="700" fill="rgba(245,235,224,0.32)" letter-spacing="1.6" text-anchor="middle">
+            <g font-family="Manrope, sans-serif" font-size="6" font-weight="700" fill="rgba(245,235,224,0.32)" letter-spacing="1.6" text-anchor="middle">
               <text x="710" y="290">KENTUCKY</text>
               <text x="697" y="420">MISS.</text>
               <text x="744" y="425">ALABAMA</text>
@@ -864,7 +754,7 @@
             </g>
 
             <!-- Connection lines radiating from Chattanooga HQ — accurate LAEA positions -->
-            <g stroke="#E8641C" stroke-width="0.7" stroke-dasharray="2.5 2.5" opacity="0.55" fill="none">
+            <g stroke="#1E3A5F" stroke-width="0.7" stroke-dasharray="2.5 2.5" opacity="0.55" fill="none">
               <path d="M 766,339 L 748,270"/>   <!-- to Louisville -->
               <path d="M 766,339 L 738,318"/>   <!-- to Nashville -->
               <path d="M 766,339 L 785,315"/>   <!-- to Knoxville -->
@@ -877,71 +767,71 @@
             </g>
 
             <!-- Metro dots — accurate lat/lon → LAEA → SVG positions (matches simplemaps projection) -->
-            <g font-family="Poppins, sans-serif" font-size="7" font-weight="700" fill="#E8E2D9" letter-spacing="0.5">
+            <g font-family="Manrope, sans-serif" font-size="7" font-weight="700" fill="#F5EBE0" letter-spacing="0.5">
 
               <!-- Louisville, KY (38.2527°N, -85.7585°W) — north-central KY -->
               <circle cx="748" cy="270" r="9" fill="url(#metroGlow)"/>
-              <circle cx="748" cy="270" r="2.5" fill="#E8641C"/>
+              <circle cx="748" cy="270" r="2.5" fill="#1E3A5F"/>
               <text x="748" y="261" text-anchor="middle">LOUISVILLE</text>
 
               <!-- Nashville, TN (36.1627°N, -86.7816°W) — central TN -->
               <circle cx="738" cy="318" r="9" fill="url(#metroGlow)"/>
-              <circle cx="738" cy="318" r="2.5" fill="#E8641C"/>
+              <circle cx="738" cy="318" r="2.5" fill="#1E3A5F"/>
               <text x="738" y="309" text-anchor="middle">NASHVILLE</text>
 
               <!-- Knoxville, TN (35.9606°N, -83.9207°W) — east TN -->
               <circle cx="785" cy="315" r="9" fill="url(#metroGlow)"/>
-              <circle cx="785" cy="315" r="2.5" fill="#E8641C"/>
+              <circle cx="785" cy="315" r="2.5" fill="#1E3A5F"/>
               <text x="780" y="306" text-anchor="middle">KNOXVILLE</text>
 
               <!-- Pigeon Forge, TN (35.7884°N, -83.5543°W) — just SE of Knoxville -->
               <circle cx="792" cy="318" r="5" fill="url(#metroGlow)"/>
-              <circle cx="792" cy="318" r="2" fill="#E8641C"/>
+              <circle cx="792" cy="318" r="2" fill="#1E3A5F"/>
               <text x="805" y="327" text-anchor="start" font-size="6">PIGEON FORGE</text>
 
               <!-- Chattanooga, TN — HQ (35.0456°N, -85.3097°W) — SE TN at GA border -->
               <circle cx="766" cy="339" r="13" fill="url(#hqGlow)"/>
-              <circle cx="766" cy="339" r="4" fill="#FFF6EA" stroke="#E8641C" stroke-width="1.5"/>
-              <text x="751" y="343" text-anchor="end" font-size="7.5" font-weight="800" fill="#FFF6EA">CHATTANOOGA</text>
-              <text x="751" y="351" text-anchor="end" font-size="5.5" font-weight="600" fill="#F1A57A" letter-spacing="1.2">— HQ —</text>
+              <circle cx="766" cy="339" r="4" fill="#FFF4E5" stroke="#1E3A5F" stroke-width="1.5"/>
+              <text x="751" y="343" text-anchor="end" font-size="7.5" font-weight="800" fill="#FFF4E5">CHATTANOOGA</text>
+              <text x="751" y="351" text-anchor="end" font-size="5.5" font-weight="600" fill="#3D5F8A" letter-spacing="1.2">— HQ —</text>
 
               <!-- Birmingham, AL (33.5186°N, -86.8104°W) — central AL -->
               <circle cx="745" cy="375" r="9" fill="url(#metroGlow)"/>
-              <circle cx="745" cy="375" r="2.5" fill="#E8641C"/>
+              <circle cx="745" cy="375" r="2.5" fill="#1E3A5F"/>
               <text x="745" y="391" text-anchor="middle">BIRMINGHAM</text>
 
               <!-- Atlanta, GA (33.7490°N, -84.3880°W) — north-central GA -->
               <circle cx="785" cy="365" r="9" fill="url(#metroGlow)"/>
-              <circle cx="785" cy="365" r="2.5" fill="#E8641C"/>
+              <circle cx="785" cy="365" r="2.5" fill="#1E3A5F"/>
               <text x="798" y="367" text-anchor="start">ATLANTA</text>
 
               <!-- Charlotte, NC (35.2271°N, -80.8431°W) — central NC -->
               <circle cx="838" cy="322" r="9" fill="url(#metroGlow)"/>
-              <circle cx="838" cy="322" r="2.5" fill="#E8641C"/>
+              <circle cx="838" cy="322" r="2.5" fill="#1E3A5F"/>
               <text x="838" y="313" text-anchor="middle">CHARLOTTE</text>
 
               <!-- Orlando, FL (28.5383°N, -81.3792°W) — central FL peninsula -->
               <circle cx="856" cy="469" r="9" fill="url(#metroGlow)"/>
-              <circle cx="856" cy="469" r="2.5" fill="#E8641C"/>
+              <circle cx="856" cy="469" r="2.5" fill="#1E3A5F"/>
               <text x="867" y="470" text-anchor="start">ORLANDO</text>
 
               <!-- Tampa, FL (27.9506°N, -82.4572°W) — west coast FL peninsula -->
               <circle cx="839" cy="485" r="9" fill="url(#metroGlow)"/>
-              <circle cx="839" cy="485" r="2.5" fill="#E8641C"/>
+              <circle cx="839" cy="485" r="2.5" fill="#1E3A5F"/>
               <text x="828" y="498" text-anchor="middle">TAMPA</text>
             </g>
 
             <!-- Title overlay, bottom-left -->
-            <g font-family="Poppins, sans-serif">
-              <text x="608" y="525" font-size="8" font-weight="700" fill="#E8641C" letter-spacing="2">SERVICE AREA</text>
-              <text x="608" y="540" font-size="14" font-weight="800" fill="#E8E2D9" letter-spacing="-0.5">Southeast US</text>
+            <g font-family="Manrope, sans-serif">
+              <text x="608" y="525" font-size="8" font-weight="700" fill="#1E3A5F" letter-spacing="2">SERVICE AREA</text>
+              <text x="608" y="540" font-size="14" font-weight="800" fill="#F5EBE0" letter-spacing="-0.5">Southeast US</text>
             </g>
 
             <!-- Compass -->
-            <g transform="translate(925, 535)" font-family="Poppins, sans-serif" font-size="6" font-weight="700" fill="#E8641C" opacity="0.6">
+            <g transform="translate(925, 535)" font-family="Manrope, sans-serif" font-size="6" font-weight="700" fill="#1E3A5F" opacity="0.6">
               <text text-anchor="middle" y="-9">N</text>
-              <line x1="0" y1="-6" x2="0" y2="6" stroke="#E8641C" stroke-width="0.8"/>
-              <polygon points="0,-6 -2.5,-2 0,-3.5 2.5,-2" fill="#E8641C"/>
+              <line x1="0" y1="-6" x2="0" y2="6" stroke="#1E3A5F" stroke-width="0.8"/>
+              <polygon points="0,-6 -2.5,-2 0,-3.5 2.5,-2" fill="#1E3A5F"/>
             </g>
           </svg>
         </div>
@@ -1057,34 +947,34 @@
   <!-- ================================================================ -->
   <!-- FOOTER                                                             -->
   <!-- ================================================================ -->
-  <footer class="bg-white text-ink py-16 border-t border-bone">
+  <footer class="bg-ink text-bone py-16 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
       <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div class="md:col-span-2">
           <div class="font-display text-2xl font-extrabold mb-4">Twenty3Eleven<span class="text-copper">.</span></div>
-          <p class="text-muted text-sm leading-relaxed max-w-md">Expo Fabrication, Rentals, and Logistics. Stanchions, tables, carts, custom builds, and logistics solutions for trade shows, conferences, venues, and live events.</p>
+          <p class="text-bone/50 text-sm leading-relaxed max-w-md">Expo Fabrication, Rentals, and Logistics. Stanchions, tables, carts, custom builds, and logistics solutions for trade shows, conferences, venues, and live events.</p>
         </div>
         <div>
           <p class="eyebrow text-copper mb-4">Contact</p>
-          <p class="text-sm text-muted mb-2">Tennessee · Serving the Southeast US</p>
-          <a href="tel:+14233807586" data-track="phone_click" data-location="footer" class="text-ink hover:text-copper font-semibold text-lg transition-colors">
+          <p class="text-sm text-bone/50 mb-2">Tennessee · Serving the Southeast US</p>
+          <a href="tel:+14233807586" data-track="phone_click" data-location="footer" class="text-bone hover:text-copper font-semibold text-lg transition-colors">
             423-380-7586
           </a>
         </div>
         <div>
           <p class="eyebrow text-copper mb-4">More from us</p>
-          <ul class="text-sm space-y-2.5 text-muted">
+          <ul class="text-sm space-y-2.5 text-bone/60">
             <li><a href="https://twenty3elevenco.com" class="hover:text-copper transition-colors">Main site →</a></li>
             <li><a href="https://crates.twenty3elevenco.com" class="hover:text-copper transition-colors">Custom Shipping Crates →</a></li>
             <li><a href="https://logistics.twenty3elevenco.com" class="hover:text-copper transition-colors">Event Logistics →</a></li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-bone pt-6 text-xs text-muted flex flex-col md:flex-row justify-between items-center gap-3">
+      <div class="border-t border-white/10 pt-6 text-xs text-bone/40 flex flex-col md:flex-row justify-between items-center gap-3">
         <span>&copy; <span id="year"></span> Twenty3Eleven Co., LLC · All rights reserved.</span>
         <div class="flex items-center gap-4">
           <a href="https://twenty3elevenco.com/termsfeed/privacy-policy/" class="hover:text-copper transition-colors">Privacy Policy</a>
-          <span class="text-ink/20">·</span>
+          <span class="text-bone/20">·</span>
           <a href="https://twenty3elevenco.com/termsfeed/terms-and-conditions/" class="hover:text-copper transition-colors">Terms &amp; Conditions</a>
         </div>
       </div>
@@ -1094,9 +984,9 @@
   <!-- ================================================================ -->
   <!-- STICKY MOBILE CTA BAR                                              -->
   <!-- ================================================================ -->
-  <div class="fixed bottom-0 left-0 right-0 md:hidden bg-white p-3 z-50 grid grid-cols-2 gap-2 shadow-2xl border-t border-bone">
+  <div class="fixed bottom-0 left-0 right-0 md:hidden bg-ink p-3 z-50 grid grid-cols-2 gap-2 shadow-2xl border-t border-white/10">
     <a href="tel:+14233807586" data-track="phone_click" data-location="mobile_sticky"
-       class="text-center bg-white border border-copper text-copper font-bold py-3.5 rounded-xl">Call</a>
+       class="text-center bg-white/5 border border-white/20 text-bone font-bold py-3.5 rounded-xl">Call</a>
     <a href="#quote" class="text-center btn-copper font-bold py-3.5 rounded-xl">Get Quote</a>
   </div>
 
@@ -1106,13 +996,18 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Header: add a shadow when the page is scrolled (already sticky + bg-white).
+    // Header: turn solid on scroll
     (function() {
       const header = document.getElementById('site-header');
-      if (!header) return;
       const update = () => {
-        if (window.scrollY > 40) header.classList.add('shadow-md');
-        else header.classList.remove('shadow-md');
+        if (window.scrollY > 40) {
+          header.classList.add('bg-ink','shadow-lg','backdrop-blur');
+          header.classList.remove('absolute');
+          header.classList.add('fixed');
+        } else {
+          header.classList.remove('bg-ink','shadow-lg','backdrop-blur','fixed');
+          header.classList.add('absolute');
+        }
       };
       window.addEventListener('scroll', update, { passive: true });
       update();
