@@ -86,7 +86,14 @@
     img { max-width: 100%; height: auto; }
     body { margin: 0; }
 
-    html { scroll-behavior: smooth; }
+    /* Native smooth-scroll gets canceled mid-animation on this page, so anchor
+       jumps are handled in JS below. scroll-margin-top clears the 81px sticky header. */
+    #products, #how, #service, #quote, #quote-bottom, #faq { scroll-margin-top: 84px; }
+
+    /* Product card grids: center an incomplete final row instead of left-aligning it */
+    .cards-center { display: flex; flex-wrap: wrap; justify-content: center; }
+    .cards-center > .product-card { width: calc(50% - 0.5rem); }
+    @media (min-width: 768px) { .cards-center > .product-card { width: calc(25% - 1.125rem); } }
     body {
       font-family: 'Poppins', system-ui, sans-serif;
       color: #31353C;
@@ -432,7 +439,7 @@
   <!-- Product photos pulled from t3erentals.com WP media. Display-only:  -->
   <!-- no anchor tags, no data-track, no click handlers, no hover-nav.    -->
   <!-- ================================================================ -->
-  <section class="py-20 lg:py-24 bg-bone-light">
+  <section id="products" class="py-20 lg:py-24 bg-bone-light">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
 
       <div class="text-center max-w-3xl mx-auto mb-14 lg:mb-16">
@@ -447,7 +454,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      <div class="cards-center gap-4 md:gap-6">
 
         <div class="product-card">
           <div class="product-media">
@@ -490,6 +497,10 @@
         </div>
 
       </div>
+
+      <div class="text-center mt-12">
+        <a href="#quote-bottom" class="inline-flex items-center gap-2 text-copper font-semibold hover:underline underline-offset-4">Get a fast quote <span aria-hidden="true">&rarr;</span></a>
+      </div>
     </div>
   </section>
 
@@ -498,7 +509,7 @@
   <!-- ================================================================ -->
   <section class="bg-white py-8 border-b border-bone">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-      <p class="eyebrow text-copper text-center mb-6 opacity-80">As deployed for</p>
+      <p class="eyebrow text-copper text-center mb-6 opacity-80">Frequently rented for</p>
       <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 opacity-60">
         <span class="font-display font-bold text-muted text-lg tracking-tight">Trade Shows</span>
         <span class="text-ink/20">·</span>
@@ -559,7 +570,7 @@
   <!-- ================================================================ -->
   <!-- PRODUCT TABS — dark band, photo + spec layout                      -->
   <!-- ================================================================ -->
-  <section id="products" class="py-24 lg:py-32 bg-white">
+  <section class="py-24 lg:py-32 bg-white">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 lg:mb-16">
         <div class="max-w-2xl">
@@ -1103,6 +1114,51 @@
   <!-- ================================================================ -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reliable anchor scrolling. Native CSS smooth-scroll gets canceled mid-animation
+    // (hash links + header nav were landing at the top instead of the target section),
+    // so we position the scroll directly. Handles in-page nav clicks and Google Ads
+    // sitelink deep-links (e.g. /#products).
+    (function() {
+      const HEADER = 84;
+      function targetTop(el) { return el.getBoundingClientRect().top + window.scrollY - HEADER; }
+      function smoothTo(top) {
+        const start = window.scrollY, dist = top - start, dur = 450;
+        let t0 = null;
+        function step(ts) {
+          if (!t0) t0 = ts;
+          const p = Math.min((ts - t0) / dur, 1);
+          const ease = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+          document.scrollingElement.scrollTop = start + dist * ease;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      document.addEventListener('click', function(e) {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        const hash = a.getAttribute('href');
+        if (!hash || hash.length < 2) return;
+        const el = document.getElementById(hash.slice(1));
+        if (!el) return;
+        e.preventDefault();
+        history.pushState(null, '', hash);
+        smoothTo(targetTop(el));
+      });
+      function deepLinkJump() {
+        if (!location.hash || location.hash.length < 2) return;
+        const el = document.getElementById(location.hash.slice(1));
+        if (el) window.scrollTo({ top: targetTop(el), behavior: 'instant' });
+      }
+      if (location.hash && location.hash.length > 1) {
+        document.addEventListener('DOMContentLoaded', deepLinkJump);
+        window.addEventListener('load', function() {
+          deepLinkJump();
+          setTimeout(deepLinkJump, 200);
+          setTimeout(deepLinkJump, 600);
+        });
+      }
+    })();
 
     // Header: add a shadow when the page is scrolled (already sticky + bg-white).
     (function() {
