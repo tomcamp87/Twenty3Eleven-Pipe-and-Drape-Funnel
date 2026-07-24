@@ -140,7 +140,7 @@
   <!-- HEADER -->
   <header class="sticky top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
-      <a href="https://t3erentals.com" class="flex items-center" aria-label="Twenty3Eleven Rentals">
+      <a href="https://twenty3elevenco.com" class="flex items-center" aria-label="Twenty3Eleven Rentals">
         <img src="https://t3erentals.com/wp-content/uploads/2026/07/Twenty3Eleven-Rentals-Logo-Sized-New.svg"
              alt="Twenty3Eleven Rentals"
              width="180" height="60"
@@ -178,7 +178,7 @@
         Your quote request just hit our inbox. A team member will reach out shortly with pricing and availability.
       </p>
 
-      <a href="https://t3erentals.com"
+      <a href="https://twenty3elevenco.com"
          class="btn-copper inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md font-semibold text-sm tracking-wide uppercase">
         Back to main site
         <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
@@ -191,9 +191,9 @@
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 text-xs text-muted flex flex-col md:flex-row justify-between items-center gap-3">
       <span>&copy; <span id="year"></span> Twenty3Eleven Co., LLC · All rights reserved.</span>
       <div class="flex items-center gap-4">
-        <a href="https://t3erentals.com/termsfeed/privacy-policy/" class="hover:text-copper transition-colors">Privacy Policy</a>
+        <a href="https://twenty3elevenco.com/termsfeed/privacy-policy/" class="hover:text-copper transition-colors">Privacy Policy</a>
         <span class="text-copper">·</span>
-        <a href="https://t3erentals.com/termsfeed/terms-and-conditions/" class="hover:text-copper transition-colors">Terms &amp; Conditions</a>
+        <a href="https://twenty3elevenco.com/termsfeed/terms-and-conditions/" class="hover:text-copper transition-colors">Terms &amp; Conditions</a>
       </div>
     </div>
   </footer>

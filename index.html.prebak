@@ -1046,7 +1046,7 @@
   <!-- ================================================================ -->
   <footer class="bg-white text-ink py-16 border-t border-bone">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-      <div class="grid md:grid-cols-3 gap-10 mb-12">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div class="md:col-span-2">
           <div class="font-display text-2xl font-extrabold mb-4">Twenty3Eleven<span class="text-copper">.</span></div>
           <p class="text-muted text-sm leading-relaxed max-w-md">Expo Fabrication, Rentals, and Logistics. Stanchions, tables, carts, custom builds, and logistics solutions for trade shows, conferences, venues, and live events.</p>
@@ -1058,13 +1058,21 @@
             423-380-7586
           </a>
         </div>
+        <div>
+          <p class="eyebrow text-copper mb-4">More from us</p>
+          <ul class="text-sm space-y-2.5 text-muted">
+            <li><a href="https://twenty3elevenco.com" class="hover:text-copper transition-colors">Main site →</a></li>
+            <li><a href="https://crates.twenty3elevenco.com" class="hover:text-copper transition-colors">Custom Shipping Crates →</a></li>
+            <li><a href="https://logistics.twenty3elevenco.com" class="hover:text-copper transition-colors">Event Logistics →</a></li>
+          </ul>
+        </div>
       </div>
       <div class="border-t border-bone pt-6 text-xs text-muted flex flex-col md:flex-row justify-between items-center gap-3">
         <span>&copy; <span id="year"></span> Twenty3Eleven Co., LLC · All rights reserved.</span>
         <div class="flex items-center gap-4">
-          <a href="https://t3erentals.com/termsfeed/privacy-policy/" class="hover:text-copper transition-colors">Privacy Policy</a>
+          <a href="https://twenty3elevenco.com/termsfeed/privacy-policy/" class="hover:text-copper transition-colors">Privacy Policy</a>
           <span class="text-ink/20">·</span>
-          <a href="https://t3erentals.com/termsfeed/terms-and-conditions/" class="hover:text-copper transition-colors">Terms &amp; Conditions</a>
+          <a href="https://twenty3elevenco.com/termsfeed/terms-and-conditions/" class="hover:text-copper transition-colors">Terms &amp; Conditions</a>
         </div>
       </div>
     </div>
