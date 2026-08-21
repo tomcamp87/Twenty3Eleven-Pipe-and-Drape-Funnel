@@ -336,10 +336,10 @@
   <header id="site-header" class="sticky top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
       <a href="https://twenty3elevenco.com" class="flex items-center" aria-label="Twenty3Eleven Rentals">
-        <picture><source type="image/webp" srcset="images/twenty3eleven-rentals-logo-sized-new.webp"><img src="https://t3erentals.com/wp-content/uploads/2026/07/Twenty3Eleven-Rentals-Logo-Sized-New.svg"
+        <img src="https://t3erentals.com/wp-content/uploads/2026/07/Twenty3Eleven-Rentals-Logo-Sized-New.svg"
              alt="Twenty3Eleven Rentals"
              width="180" height="60"
-             class="h-8 sm:h-9 w-auto" loading="eager" decoding="async"></picture>
+             class="h-8 sm:h-9 w-auto" loading="eager" decoding="async">
       </a>
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink">
         <a href="#products" class="hover:text-copper transition-colors">Inventory</a>
@@ -477,9 +477,9 @@
 
         <div class="product-card">
           <div class="product-media">
-            <picture><source type="image/webp" srcset="images/product20photo20-20new20drape20sized.webp"><img src="https://t3erentals.com/wp-content/uploads/2026/07/Product20Photo20-20New20Drape20Sized.png"
+            <img src="https://t3erentals.com/wp-content/uploads/2026/07/Product20Photo20-20New20Drape20Sized.png"
                  alt="Pipe and drape kit — clean white drape backdrop"
-                 loading="lazy" width="600" height="600"></picture>
+                 loading="lazy" width="600" height="600">
           </div>
           <div class="product-title mb-2">Pipe &amp; Drape Kit</div>
           <p class="text-sm text-muted leading-relaxed">Full draping set-up, includes 3 panels per pole.</p>
@@ -487,9 +487,9 @@
 
         <div class="product-card">
           <div class="product-media">
-            <picture><source type="image/webp" srcset="images/product-photo-pipe-drape-bare1.webp"><img src="https://t3erentals.com/wp-content/uploads/2026/07/Product-Photo-Pipe-Drape-Bare1.png"
+            <img src="https://t3erentals.com/wp-content/uploads/2026/07/Product-Photo-Pipe-Drape-Bare1.png"
                  alt="Bare bases, telescopic poles, and crossbars"
-                 loading="lazy" width="600" height="600"></picture>
+                 loading="lazy" width="600" height="600">
           </div>
           <div class="product-title mb-2">Bases &amp; Poles</div>
           <p class="text-sm text-muted leading-relaxed">Bases, telescopic poles, and crossbars (sandbags included).</p>
@@ -497,9 +497,9 @@
 
         <div class="product-card">
           <div class="product-media">
-            <picture><source type="image/webp" srcset="images/product-photo-pipe-and-drape-wedding1.webp"><img src="https://t3erentals.com/wp-content/uploads/2026/07/Product-Photo-Pipe-and-Drape-Wedding1.png"
+            <img src="https://t3erentals.com/wp-content/uploads/2026/07/Product-Photo-Pipe-and-Drape-Wedding1.png"
                  alt="Draped wedding backdrop with white flowing panels"
-                 loading="lazy" width="600" height="600"></picture>
+                 loading="lazy" width="600" height="600">
           </div>
           <div class="product-title mb-2">Draped Wedding Backdrop</div>
           <p class="text-sm text-muted leading-relaxed">Soft draped backdrops for ceremonies, stages, and photo moments.</p>
@@ -507,9 +507,9 @@
 
         <div class="product-card">
           <div class="product-media">
-            <picture><source type="image/webp" srcset="images/trade-show-booth-kit-resized-1024x1024.webp"><img src="https://t3erentals.com/wp-content/uploads/2026/07/Trade-Show-Booth-Kit-Resized-1024x1024.png"
+            <img src="https://t3erentals.com/wp-content/uploads/2026/07/Trade-Show-Booth-Kit-Resized-1024x1024.png"
                  alt="Trade show booth kit with navy drape, table, and side walls"
-                 loading="lazy" width="600" height="600"></picture>
+                 loading="lazy" width="600" height="600">
           </div>
           <div class="product-title mb-2">Trade Show Booth Kit</div>
           <p class="text-sm text-muted leading-relaxed">Complete booth kits with drape, table, and signage-ready walls.</p>
@@ -633,10 +633,10 @@
       <!-- BASES &AMP; HARDWARE -->
       <div id="tab-bases" role="tabpanel" class="tab-panel hidden grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-bone-light shadow-card border border-bone">
-          <picture><source type="image/webp" srcset="images/product-photo-pipe-drape-bare1.webp"><img src="https://t3erentals.com/wp-content/uploads/2026/07/Product-Photo-Pipe-Drape-Bare1.webp"
+          <img src="https://t3erentals.com/wp-content/uploads/2026/07/Product-Photo-Pipe-Drape-Bare1.webp"
                alt="Bare pipe-and-drape kit hardware — bases, uprights, and crossbars"
                width="1024" height="1024" loading="lazy"
-               class="w-full h-full object-contain p-6" decoding="async"></picture>
+               class="w-full h-full object-contain p-6" decoding="async">
         </div>
         <div class="lg:col-span-5">
           <p class="eyebrow text-copper mb-3">02 · Bases &amp; Hardware</p>
@@ -654,10 +654,10 @@
       <!-- THE COMPLETE BOOTH KIT -->
       <div id="tab-kit" role="tabpanel" class="tab-panel hidden grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <div class="aspect-[4/3] lg:col-span-7 rounded-xl overflow-hidden bg-bone-light shadow-card border border-bone">
-          <picture><source type="image/webp" srcset="images/trade-show-booth-kit-resized-1024x1024.webp"><img src="https://t3erentals.com/wp-content/uploads/2026/07/Trade-Show-Booth-Kit-Resized-1024x1024.png"
+          <img src="https://t3erentals.com/wp-content/uploads/2026/07/Trade-Show-Booth-Kit-Resized-1024x1024.png"
                alt="Complete trade show booth kit: pipe and drape wall, table, and side walls"
                width="1024" height="1024" loading="lazy"
-               class="w-full h-full object-contain p-6" decoding="async"></picture>
+               class="w-full h-full object-contain p-6" decoding="async">
         </div>
         <div class="lg:col-span-5">
           <p class="eyebrow text-copper mb-3">03 · The Complete Booth Kit</p>
