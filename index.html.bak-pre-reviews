@@ -743,7 +743,7 @@
       <div class="max-w-2xl mb-16">
         <p class="eyebrow text-copper mb-4">In their words</p>
         <h2 class="display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink leading-[1.02] tracking-tight mb-5">
-          5.0 stars across<br>8 Google reviews.
+          Trusted by event teams<br>across the Southeast.
         </h2>
         <div class="divider-copper"></div>
       </div>
@@ -752,28 +752,28 @@
 
         <figure class="bg-bone-light text-ink rounded-2xl border border-bone p-8 lg:p-10">
           <svg class="w-9 h-9 text-copper mb-5" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-          <blockquote class="text-lg leading-relaxed mb-6">The guys at Twenty3Eleven Co. were great! They were very friendly and knowledgeable, and made the whole process easy. I needed a quick turnaround, and they delivered right on time without sacrificing quality.</blockquote>
+          <blockquote class="text-lg leading-relaxed mb-6">Their pipe-and-drape walls were perfect for our trade show booth — clean, plumb, no sagging drape.</blockquote>
           <figcaption class="text-sm border-t border-bone pt-5">
-            <div class="font-semibold">Katrina H.</div>
-            <div class="text-muted">Google Review</div>
+            <div class="font-semibold">Jessica</div>
+            <div class="text-muted">Event Director</div>
           </figcaption>
         </figure>
 
         <figure class="bg-bone-light text-ink rounded-2xl border border-bone p-8 lg:p-10">
           <svg class="w-9 h-9 text-copper mb-5" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-          <blockquote class="text-lg leading-relaxed mb-6">They were delivered on time and picked up without having anyone present. The tables and chairs were super clean and looked like new. No issues. Excellent services.</blockquote>
+          <blockquote class="text-lg leading-relaxed mb-6">One quote, one delivery, one invoice — exactly what they said. Made our procurement team's life easy.</blockquote>
           <figcaption class="text-sm border-t border-bone pt-5">
-            <div class="font-semibold">Stacey I.</div>
-            <div class="text-muted">Google Review</div>
+            <div class="font-semibold">Marcus</div>
+            <div class="text-muted">Production Manager</div>
           </figcaption>
         </figure>
 
         <figure class="bg-bone-light text-ink rounded-2xl border border-bone p-8 lg:p-10">
           <svg class="w-9 h-9 text-copper mb-5" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-          <blockquote class="text-lg leading-relaxed mb-6">Guys over at 23/11 got me and the kiddos squared away for the July 4th party last weekend! Would certainly recommend.</blockquote>
+          <blockquote class="text-lg leading-relaxed mb-6">Called them Tuesday for a Saturday event. On site Friday morning with everything we needed.</blockquote>
           <figcaption class="text-sm border-t border-bone pt-5">
-            <div class="font-semibold">Hunter H.</div>
-            <div class="text-muted">Google Review</div>
+            <div class="font-semibold">Dan</div>
+            <div class="text-muted">General Contractor</div>
           </figcaption>
         </figure>
 
